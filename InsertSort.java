@@ -71,26 +71,33 @@ final class InsertSort {
      */
 
     public static int[] insertSort(final int[] arrayInt) {
-        
+
         // Sort the array using insertion sort algorithm
         // Source: https://www.programiz.com/dsa/insertion-sort
+        // Loop through the array starting from the second element
         for (int pass = 1; pass < ARRAY_SIZE; pass++) {
-            int key = arrayInt[pass];
+
+            // store the current number
+            int currentNum = arrayInt[pass];
             int counter = pass - 1;
 
-            // Compare key with each element on the left of it until an element smaller than
-            // it is found.
-            // For descending order, change key<array[j] to key>array[j].
-            while (counter >= 0 && key < arrayInt[counter]) {
+            // Compare key with each element on the left of it
+            // until an element smaller than it is found.
+            while (counter >= 0 && currentNum < arrayInt[counter]) {
+
+                // Shift the larger number one position to the left
                 arrayInt[counter + 1] = arrayInt[counter];
+
+                // Decrement counter
                 --counter;
             }
 
-            // Place key at after the element just smaller than it.
-            arrayInt[counter + 1] = key;
+            // Shift the current number one position to the left
+            arrayInt[counter + 1] = currentNum;
 
         }
 
+        // return the sorted array
         return arrayInt;
     }
 
@@ -120,6 +127,7 @@ final class InsertSort {
             outputStr += (num + " ");
         }
 
+        // Add a newline to the output string for spacing
         outputStr += "\n";
 
          // Write to the output file
