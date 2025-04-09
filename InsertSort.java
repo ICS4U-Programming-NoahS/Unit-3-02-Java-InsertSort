@@ -113,12 +113,12 @@ final class InsertSort {
         String outputStr = "";
 
         // Greeting
-        System.out.println("Welcome to the bubble sort program!");
+        System.out.println("Welcome to the insert sort program!");
 
         // Get the unsorted array by calling the populating arrays function
         int[] arrayNumber = populatingArrays();
 
-        // Get the sorted array by calling the bubble sort function
+        // Get the sorted array by calling the insert sort function
         arrayNumber = insertSort(arrayNumber);
 
         // Display the array
